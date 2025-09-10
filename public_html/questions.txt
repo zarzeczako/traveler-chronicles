@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Anna Kowalska",
+        "gender": "Kobieta",
+        "type": "Pytanie",
+        "content": "Skąd miałeś pieniądze na to?"
+    },
+    {
+        "name": "Jan Nowak",
+        "gender": "Mężczyzna",
+        "type": "Prośba",
+        "content": "Dasz mi autograf?"
+    }
+]

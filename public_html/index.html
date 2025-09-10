@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tytuł strony -->
+    <title>Dziennik Podróżnika</title>
+    <!-- Ikona strony -->
+    <link rel="icon" type="image/x-icon" href="img/ikona.png">
+    <!-- Łączenie zewnętrznych arkuszy stylów -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/slider.css">
+    <link rel="stylesheet" href="CSS/stronaglowna.css">
+</head>
+<body>
+    <!-- Nagłówek strony -->
+    <header>
+        <p class="banner">KRONIKI PODRÓŻNIKA</p>
+        <!-- Sekcja slidera z obrazami -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Obraz slajdu 1 -->
+                <img class="slide displaySlide" src="img/slajd1.jpg" alt="Slajd 1">
+                <!-- Obraz slajdu 2 -->
+                <img class="slide" src="img/slajd2.jpg" alt="Slajd 2">
+                <!-- Obraz slajdu 3 -->
+                <img class="slide" src="img/slajd3.jpg" alt="Slajd 3">
+            </div>
+            <!-- Przyciski nawigacyjne do zmiany slajdów -->
+            <button class="prev" id="prev">&#10094;</button>
+            <button class="next" id="next">&#10095;</button>
+        </div>
+        <!-- Przyciski nawigacyjne do różnych stron witryny -->
+        <div class="nav-buttons">
+            <button id="home-btn">STRONA GŁÓWNA</button>
+            <button id="questions-btn">PYTANIA</button>
+            <button id="gallery-btn">GALERIA</button>
+            <button id="sources-btn">ŹRÓDŁA</button>
+            <!-- Przyciski nawigacyjne do poszczególnych slajdów (kropki) -->
+            <div class="slide-buttons">
+                <a class="slide-btn" onclick="showSlide(0)"></a>
+                <a class="slide-btn" onclick="showSlide(1)"></a>
+                <a class="slide-btn" onclick="showSlide(2)"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Sekcja "O mnie" i posty -->
+        <section id="content" class="content-section">
+            <!-- Sekcja "O mnie", zawiera tekst i zdjęcie -->
+            <div class="about-container">
+                <div class="about-text">
+                    <h1 class="centered-text">KILKA SŁÓW O MNIE</h1>
+                    <p>Jestem Michał, 22 letni student Informatyki na Politechnice Lubelskiej. Po tym jak zdałem sesje, poczułem że jestem zdolny do niemożliwych rzeczy. Dlatego w mojej głowie przerodził się szalony pomysł- postanowiłem zwiedzić 5 najciekawszych moim zdaniem miejsc na świecie w 5 dni. Mój blog opisuje jak mój "projekt" przebiegł. Czy mi się udało? Czy zdążyłem ze wszystkimi miejscami? Zapraszam do czytania i do przekonania się samemu.</p>
+                </div>
+                <!-- Zdjęcie autora(moje) -->
+                <div class="about-image">
+                    <img src="img/moje_zdjecie.jpg" alt="Moje zdjęcie" width="200" height="300">
+                </div>
+            </div>
+            <!-- Sekcja postów z podróży -->
+            <h2 class="centered-text2">POSTY</h2>
+            <div class="posts-section">
+                <div class="posts-container">
+                    <!-- Post o Londynie -->
+                    <div class="post">
+                        <!-- Obrazek posta po lewej stronie -->
+                        <div class="post-image-left">
+                            <a href="londyn.html"><img src="img/LONDYN.gif" alt="Post 1"></a>
+                        </div>
+                        <!-- Tekst posta -->
+                        <div class="post-text">
+                            <a href="londyn.html"><h2>LONDYN</h2></a>
+                            <p>Swoją podróż rozpocząłem w Londynie. Wiedziałem że przez dynamiczną formę mojego planu dotyczącego wycieczki, nie mam zbyt wiele czasu, dlatego postanowiłem działać jak najszybciej. W pośpiechu do centrum Londynu, zauważyłem że gdzieś wypadła mi moja torba z paszportem i innymi dokumentami. Bez nich cała dalsza podróż stała pod znakiem zapytania. Zacząłem jej szukać jak szalony, aż nagle zobaczyłem że...<a href="londyn.html">Czytaj dalej</a></p>
+                        </div>
+                    </div>
+                    <!-- Post o Paryżu -->
+                    <div class="post">
+                        <!-- Tekst posta -->
+                        <div class="post-text">
+                            <a href="paryz.html"><h2>PARYŻ</h2></a>
+                            <p>Drugi dzień mojej podróży rozpocząłem w Paryżu. Po wczorajszym dniu pełnym emocji w Londynie, byłem gotowy na nowe przygody w stolicy Francji. Z samego rana wybrałem się na zwiedzanie jednego z najbardziej ikonicznych miejsc na świecie - Wieży Eiffla. Wspinając się na jej szczyt...<a href="paryz.html">Czytaj dalej</a></p>
+                        </div>
+                        <!-- Obrazek posta po prawej stronie -->
+                        <div class="post-image-right">
+                            <a href="paryz.html"><img src="img/PARIS.gif" alt="Post 2"></a>
+                        </div>
+                    </div>
+                    <!-- Post o Nowym Jorku -->
+                    <div class="post">
+                        <!-- Obrazek posta po lewej stronie -->
+                        <div class="post-image-left">
+                            <a href="nowyjork.html"><img src="img/NOWY_JORK.gif" alt="Post 3"></a>
+                        </div>
+                        <!-- Tekst posta -->
+                        <div class="post-text">
+                            <a href="nowyjork.html"><h2>NOWY YORK</h2></a>
+                            <p>Trzeci dzień mojej podróży rozpocząłem w Nowym Jorku, mieście, które nigdy nie śpi. Po magicznych chwilach spędzonych w Paryżu, byłem gotowy na odkrywanie kolejnych tajemnic w sercu Stanów Zjednoczonych. Pierwszym przystankiem na mojej liście była Statua Wolności. Zbliżając się do tego symbolu wolności...<a href="nowyjork.html">Czytaj dalej</a></p>
+                        </div>
+                    </div>
+                    <!-- Post o Los Angeles -->
+                    <div class="post">
+                        <!-- Tekst posta -->
+                        <div class="post-text">
+                            <a href="losangeles.html"><h2>LOS ANGELES</h2></a>
+                            <p>Czwarty dzień mojej podróży rozpocząłem w Los Angeles. Po pełnym wrażeń dniu w Nowym Jorku, byłem podekscytowany możliwością zwiedzenia miasta, które tak często oglądałem w grach i filmach. Los Angeles było miejscem, o którym marzyłem od lat, zwłaszcza ze względu na...<a href="losangeles.html">Czytaj dalej</a></p>
+                        </div>
+                        <!-- Obrazek posta po prawej stronie -->
+                        <div class="post-image-right">
+                            <a href="losangeles.html"><img src="img/LOSANGELES.gif" alt="Post 4"></a>
+                        </div>
+                    </div>
+                    <!-- Post o Madrycie -->
+                    <div class="post">
+                        <!-- Obrazek posta po lewej stronie -->
+                        <div class="post-image-left">
+                            <a href="madryt.html"><img src="img/MADRYT.gif" alt="Post 5"></a>
+                        </div>
+                        <!-- Tekst posta -->
+                        <div class="post-text">
+                            <a href="madryt.html"><h2>MADRYT</h2></a>
+                            <p>Piąty dzień mojej podróży rozpocząłem w Madrycie. Po intensywnych dniach w innych częściach świata,w tym Los Angeles, czułem się podekscytowany możliwością zwiedzenia tego dynamicznego miasta, które tak wiele ma do zaoferowania.Spacerując po ulicach stolicy Hiszpanii, poczułem się jak w prawdziwym sercu futbolowego świata. Ale to, co miało miejsce, przekroczyło moje najśmielsze oczekiwania. Gdy przechadzałem się po parku Retiro, nagle...<a href="madryt.html">Czytaj dalej</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Koniec sekcji głównej-->
+        </section>
+        <!-- Pasek boczny z informacjami kontaktowymi, inspiracją pomysłu, i o następnym celu -->
+        <aside>
+            <div class="box">
+                <h3>KONTAKT</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://www.instagram.com"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.pinterest.com"><img src="img/pinterest.png" alt="Pinterest" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>INSPIRACJA</h3>
+                <iframe width="210" height="185" src="https://www.youtube.com/embed/N9SiuTteiIE?si=rRa5u_5hR_iu37gW"></iframe>
+            </div>
+            <div class="box">
+                <h3>NASTEPNY CEL</h3>
+                <section class="contact-localization">
+                    <iframe width="210" height="185" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.35442532852!2d12.371187775710176!3d41.9102087922826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908503c4!2sKoloseum!5e0!3m2!1spl!2spl!4v1717191619395!5m2!1spl!2spl" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>
+                        <a href="https://gocity.com/en/blog/rome-for-movie-fans">Włochy, Rzym</a>
+                    </p>
+                </section>
+            </div>
+        </aside>
+        <!--Koniec paska bocznego-->
+    </main>
+    <!--Stopka-->
+    <footer>
+        Michał Zarzecki Copyright
+    </footer>
+    <!--Dołączenie skryptu, dzięki któremu nagłówek w pewnym momencie "łączy się/skleja" z przyciskami pod slide'ami + Funkcja dla przycisków-->
+    <script src="JS/slider.js"></script>
+</body>
+</html>

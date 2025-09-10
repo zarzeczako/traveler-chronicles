@@ -1,0 +1,207 @@
+/* Styl dla sekcji zawartości */
+.content-section {
+    padding: 40px 10px; /* Wypełnienie */
+    flex: 1; /* Pozwól content section wypełnić pozostałą przestrzeń */
+    box-sizing: border-box; /* Ustawienie modelu pudełkowego */
+}
+
+/* Styl dla tekstu wyśrodkowanego */
+.centered-text {
+    position: relative; /* Ustawienie pozycji na relatywną */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 32px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    margin-bottom: 40px; /* Margines dolny */
+    font-family: unset; /* Ustawienie domyślnej rodziny czcionek */
+    overflow: hidden; /* Ukrywa tekst, który wychodzi poza kontener */
+}
+
+/* Animacja odsłaniania tekstu */
+h1::before { 
+    content: ''; /* Zawartość pseudoelementu */
+    position: absolute; /* Ustawienie pozycji na absolutną */
+    top: 0; /* Odległość od góry */
+    left: 0%; /* Początkowe położenie */
+    width: 100%; /* Szerokość */
+    height: 100%; /* Wysokość */
+    background: white; /* Tło maski, powinno być takie samo jak tło główne */
+    animation: revealText 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Animacja odsłaniania tekstu */
+}
+
+/* Animacja fadingu */
+@keyframes revealText {
+    0% {
+        left: 0%; /* Początkowe położenie */
+    }
+    100% {
+        left: 100%; /* Końcowe położenie */
+    }
+}
+
+/* Styl dla kontenera informacji o autorze */
+.about-container {
+    display: flex; /* Wyświetlanie jako flexbox */
+    justify-content: space-between; /* Rozłożenie elementów na przestrzeni */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    max-width: 1000px; /* Maksymalna szerokość */
+    margin: 0 auto; /* Margines */
+    padding: 20px; /* Wypełnienie */
+    background: white; /* Tło */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+    border-radius: 15px; /* Promień zaokrąglenia */
+    animation: fadel 2s; /* Animacja pojawiania się */
+}
+
+/* Efekt przy hover na kontenerze informacji o autorze(mnie) */
+.about-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Zwiększenie cienia przy hover */
+    transform: translateY(-3px); /* Lekkie podniesienie kontenera */
+    transition: 0.3s; /* Czas trwania animacji */
+}
+
+/* Styl dla tekstu w kontenerze informacji o autorze(mnie)) */
+.about-text {
+    flex: 1; /* Elastyczne dopasowanie szerokości */
+    font-size: 20px; /* Rozmiar czcionki */
+    line-height: 1.8; /* Wysokość wiersza */
+    color: #333; /* Kolor tekstu */
+    padding-right: 22px; /* Wypełnienie z prawej strony */
+    font-family: unset; /* Ustawienie domyślnej rodziny czcionek */
+}
+
+/* Styl dla sekcji postów */
+.posts-section {
+    background: #f9f9f9; /* Tło */
+    padding: 20px; /* Wypełnienie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    margin-bottom: 30px; /* Margines dolny */
+}
+
+/* Styl dla kontenera postów */
+.posts-container {
+    display: flex; /* Wyświetlanie jako flexbox */
+    flex-wrap: wrap; /* Zawijanie elementów */
+    gap: 40px; /* Odstęp między elementami */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+}
+
+/* Styl dla pojedynczego posta */
+.post {
+    display: flex; /* Wyświetlanie jako flexbox */
+    background: #fff; /* Tło */
+    border: 1px solid #ddd; /* Obramowanie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Cień */
+    padding: 20px; /* Wypełnienie */
+    width: calc(100% - 20px); /* Szerokość */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    animation: fadel 2s; /* Animacja pojawiania się */
+}
+
+/* Styl dla obrazu po lewej lub prawej stronie */
+.post-image-left img,
+.post-image-right img {
+    width: 400px; /* Szerokość */
+    height: auto; /* Wysokość automatyczna */
+    border-radius: 12px; /* Promień zaokrąglenia */
+    margin-bottom: 10px; /* Margines dolny */
+    margin-top: 1px; /* Margines górny */
+}
+
+/* Styl dla tekstu w poście */
+.post-text {
+    flex: 1; /* Elastyczne dopasowanie szerokości */
+    padding: 20px; /* Wypełnienie */
+}
+
+/* Styl dla linków w tekście posta */
+.post-text a {
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: black; /* Kolor linku */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+}
+
+/* Styl dla linków w tekście posta po najechaniu myszką */
+.post-text a:hover {
+    text-decoration: underline; /* Podkreślenie po najechaniu myszką */
+}
+
+/* Styl dla nagłówka w poście */
+.post h2 {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 26px; /* Rozmiar czcionki */
+    margin-bottom: 15px; /* Margines dolny */
+}
+
+.post p {
+    font-size: 17px; /* Rozmiar czcionki */
+    color: #666; /* Kolor tekstu */
+    margin-left: 10px; /* Margines z lewej strony */
+    margin-right: 10px; /* Margines z prawej strony */
+}
+
+/* Animacja fadingu */
+@keyframes fadel {
+    0% {
+        opacity: 0; /* Początkowa przezroczystość */
+    }
+    100% {
+        opacity: 1; /* Końcowa przezroczystość */
+    }
+}
+
+/* Styl dla obrazu w kontenerze informacji o autorze */
+.about-image img {
+    width: 200px; /* Szerokość */
+    height: 300px; /* Wysokość */
+    border-radius: 10px; /* Promień zaokrąglenia */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+/* Media Queries - Umieszczenie obrazu na dole */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Układ w kolumnie */
+        align-items: center; /* Wyśrodkowanie elementów w pionie */
+    }
+
+    .about-image img {
+        order: 2; /* Kolejność */
+        margin-top: 20px; /* Margines górny */
+    }
+}
+
+/* Media Query dla ekranów o szerokości od 600px do 1024px */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .post {
+        flex-direction: column; /* Układ w kolumnie */
+        width: 100%; /* Szerokość */
+    }
+
+    .post-image-left img,
+    .post-image-right img {
+        width: 100%; /* Szerokość */
+    }
+
+    .post-text {
+        padding: 15px; /* Wypełnienie */
+    }
+}
+
+/* Media Query dla ekranów o szerokości mniejszej niż 600px */
+@media (max-width: 600px) {
+    .post {
+        flex-direction: column; /* Układ w kolumnie */
+        width: 100%; /* Szerokość */
+    }
+
+    .post-image-left img,
+    .post-image-right img {
+        width: 100%; /* Szerokość */
+    }
+
+    .post-text {
+        padding: 10px; /* Wypełnienie */
+    }
+}

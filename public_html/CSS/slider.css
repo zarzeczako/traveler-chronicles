@@ -1,0 +1,158 @@
+/* Styl dla kontenera slidera */
+.slider {
+    position: relative; /* Ustawienie pozycji na relatywną */
+    width: 100%; /* Szerokość */
+    height: 400px; /* Wysokość */
+    margin: 0; /* Resetowanie marginesu */
+    overflow: hidden; /* Ukrycie zawartości wykraczającej poza kontener */
+}
+
+/* Styl dla slajdów */
+.slides {
+    display: flex; /* Wyświetlanie jako fleksbox */
+    transition: transform 0.5s ease-in-out; /* Efekt przejścia */
+}
+
+/* Styl dla pojedynczego slajdu */
+.slide {
+    min-width: 100%; /* Minimalna szerokość */
+    height: 400px; /* Wysokość */
+    object-fit: cover; /* Dopasowanie obrazu do wymiarów kontenera */
+    display: none; /* Ukrycie slajdu */
+}
+
+/* Styl dla slajdu wyświetlanego */
+.slide.displaySlide {
+    display: block; /* Wyświetlenie slajdu */
+    animation-name: fade; /* Nazwa animacji */
+    animation-duration: 2.5s; /* Czas trwania animacji */
+}
+
+/* Styl dla przycisków nawigacyjnych */
+.slider button {
+    position: absolute; /* Ustawienie pozycji na absolutną */
+    top: 50%; /* Pozycja od góry */
+    transform: translateY(-50%); /* Przesunięcie o połowę wysokości */
+    font-size: 30px; /* Rozmiar czcionki */
+    padding: 10px 15px; /* Wypełnienie */
+    background-color: hsla(0, 0%, 0%, 0.5); /* Kolor tła z przeźroczystością */
+    color: white; /* Kolor tekstu */
+    border: none; /* Brak obramowania */
+    cursor: pointer; /* Kursor */
+}
+
+/* Styl dla przycisku "poprzedni" */
+.prev {
+    left: 0; /* Odległość od lewej krawędzi */
+}
+
+/* Styl dla przycisku "następny" */
+.next {
+    right: 0; /* Odległość od prawej krawędzi */
+}
+
+/* Animacja fadingu */
+@keyframes fade {
+    from {
+        opacity: 0.5; /* Początkowa przezroczystość */
+    }
+    to {
+        opacity: 1; /* Końcowa przezroczystość */
+    }
+}
+
+/* Styl dla przycisków nawigacyjnych slajdów */
+.slide-buttons {
+    display: inline-block; /* Wyświetlanie jako blok inline */
+    margin-left: 20px; /* Margines z lewej strony */
+    vertical-align: middle; /* Wyśrodkowanie w pionie */
+    float: right; /* Umieszczenie po prawej stronie */
+}
+
+/* Styl dla pojedynczego przycisku slajdu */
+.slide-btn {
+    color: white; /* Kolor tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    margin: 0 5px; /* Margines */
+    text-decoration: none; /* Brak dekoracji tekstu */
+    transition: all 0.4s ease-in-out; /* Efekt przejścia */
+    cursor: pointer; /* Kursor */
+    display: inline-block; /* Wyświetlanie jako blok inline */
+}
+
+/* Styl dla aktywnego przycisku slajdu */
+.slide-btn.active {
+    color: black; /* Kolor tekstu */
+}
+
+/* Styl dla znaku "kropka" po przycisku slajdu */
+.slide-btn::after {
+    content: '•'; /* Zawartość */
+    display: inline-block; /* Wyświetlanie jako blok inline */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    /* Dla ekranów o szerokości do 1200px */
+    .slider {
+        height: 300px; /* Zmiana wysokości slidera */
+    }
+
+    .slide {
+        height: 300px; /* Zmiana wysokości slajdów */
+    }
+
+    .slider button {
+        font-size: 25px; /* Zmiana rozmiaru czcionki przycisków */
+        padding: 8px 12px; /* Zmiana wypełnienia przycisków */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Dla ekranów o szerokości do 992px */
+    .slider {
+        height: 250px; /* Zmiana wysokości slidera */
+    }
+
+    .slide {
+        height: 250px; /* Zmiana wysokości slajdów */
+    }
+
+    .slider button {
+        font-size: 20px; /* Zmiana rozmiaru czcionki przycisków */
+        padding: 6px 10px; /* Zmiana wypełnienia przycisków */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Dla ekranów o szerokości do 768px */
+    .slider {
+        height: 200px; /* Zmiana wysokości slidera */
+    }
+
+    .slide {
+        height: 200px; /* Zmiana wysokości slajdów */
+    }
+
+    .slider button {
+        font-size: 18px; /* Zmiana rozmiaru czcionki przycisków */
+        padding: 4px 8px; /* Zmiana wypełnienia przycisków */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Dla ekranów o szerokości do 576px */
+    .slider {
+        height: 150px; /* Zmiana wysokości slidera */
+    }
+
+    .slide {
+        height: 150px; /* Zmiana wysokości slajdów */
+    }
+
+    .slider button {
+        font-size: 16px; /* Zmiana rozmiaru czcionki przycisków */
+        padding: 4px 6px; /* Zmiana wypełnienia przycisków */
+    }
+}

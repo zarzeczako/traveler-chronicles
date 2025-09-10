@@ -1,0 +1,324 @@
+/* Ogólne style dla całej strony */
+body {
+    margin: 0; /* Resetowanie marginesu ciała */
+    padding: 0; /* Resetowanie wypełnienia ciała */
+}
+
+/* Główny kontener strony */
+main {
+    display: flex; /* Ustawienie kontenera jako fleksbox */
+    justify-content: space-between; /* Rozłożenie elementów wzdłuż osi głównej */
+    align-items: flex-start; /* Wyrównanie elementów względem początku osi poprzecznej */
+    background: #f8f9fa; /* Tło kontenera */
+}
+
+/* Nagłówek strony */
+header {
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Margines dla głównego kontenera */
+.main-margin {
+    margin-top: 90px; /* Możesz dostosować wartość marginesu według potrzeb */
+}
+
+/* Styl dla centrowanego tekstu */
+.centered-text2 {
+    font-size: 27px; /* Rozmiar czcionki */
+    font-family: unset; /* Ustawienie domyślnej rodziny czcionek */
+    display: flex; /* Ustawienie jako fleksbox */
+    justify-content: center; /* Wyśrodkowanie względem osi głównej */
+    align-items: center; /* Wyśrodkowanie względem osi poprzecznej */
+    max-width: 80%; /* Maksymalna szerokość */
+    margin: 40px auto; /* Margines zewnętrzny */
+    padding: 20px; /* Wypełnienie wewnętrzne */
+    background: linear-gradient(to bottom, lightgray, white); /* Gradient tła */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Cień */
+    border-radius: 25px; /* Promień zaokrąglenia */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Banner */
+.banner {
+    position: fixed; /* Ustawienie pozycji na stałe */
+    top: 0; /* Odległość od góry */
+    left: 0; /* Odległość od lewej krawędzi */
+    width: 100%; /* Szerokość */
+    z-index: 1000; /* Indeks na wierzchu */
+    padding-top: 10px; /* Wypełnienie górne */
+    padding-bottom: 10px; /* Wypełnienie dolne */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 12px; /* Rozmiar czcionki */
+    font-weight: 600; /* Grubość czcionki */
+    letter-spacing: 2px; /* Odstępy między literami */
+    text-shadow: 2px 2px 4px #aaa; /* Cień tekstu */
+    color: white; /* Kolor tekstu */
+    background: black; /* Tło */
+    margin: 0; /* Resetowanie marginesu */
+}
+
+/* Przyciski nawigacyjne */
+.nav-buttons {
+    display: block; /* Wyświetlanie jako blok */
+    justify-content: center; /* Wyśrodkowanie względem osi głównej */
+    align-items: center; /* Wyśrodkowanie względem osi poprzecznej */
+    background: linear-gradient(to top, lightgray, white); /* Gradient tła */
+    padding: 15px 0; /* Wypełnienie */
+}
+
+/* Styl przycisków nawigacyjnych */
+.nav-buttons button {
+    position: relative; /* Pozycja relatywna */
+    padding: 12px 56px; /* Wypełnienie */
+    margin: 0 10px; /* Margines */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+    font-weight: 700; /* Grubość czcionki */
+    letter-spacing: 2px; /* Odstępy między literami */
+    font-family: cursive; /* Rodzina czcionek */
+    background: linear-gradient(to left, gray, black); /* Gradient tła */
+    color: white; /* Kolor tekstu */
+    cursor: pointer; /* Kursor */
+    border: none; /* Brak obramowania */
+    outline: none; /* Brak konturu */
+    border-radius: 11px; /* Promień zaokrąglenia */
+}
+
+/* Animacja przedstawiana po najechaniu na przycisk */
+.nav-buttons button::after {
+    content: ""; /* Puste miejsce */
+    position: absolute; /* Pozycja absolutna */
+    left: -1.5px; /* Odległość od lewej krawędzi */
+    top: 50%; /* Odległość od górnej krawędzi */
+    width: 100%; /* Szerokość */
+    height: 0; /* Wysokość */
+    border-left: 2px solid black; /* Lewe obramowanie */
+    border-right: 2px solid black; /* Prawe obramowanie */
+    transition: 0.3s; /* Czas trwania przejścia */
+    border-radius: 11px; /* Promień zaokrąglenia */
+}
+
+/* Animacja przedstawiana po najechaniu na przycisk */
+.nav-buttons button::before {
+    content: ""; /* Puste miejsce */
+    position: absolute; /* Pozycja absolutna */
+    left: 50%; /* Odległość od lewej krawędzi */
+    top: -1.5px; /* Odległość od górnej krawędzi */
+    width: 0%; /* Szerokość */
+    height: 100%; /* Wysokość */
+    border-top: 2px solid black; /* Górne obramowanie */
+    border-bottom: 2px solid black; /* Dolne obramowanie */
+    transition: 0.45s; /* Czas trwania przejścia */
+    border-radius: 11px; /* Promień zaokrąglenia */
+}
+
+/* Animacja przedstawiana po najechaniu na przycisk */
+.nav-buttons button:hover::before {
+    left: -1px; /* Odległość od lewej krawędzi */
+    width: calc(100% + 1px); /* Obliczona szerokość */
+}
+
+/* Animacja przedstawiana po najechaniu na przycisk */
+.nav-buttons button:hover::after {
+    top: -1px; /* Odleg */
+    height: calc(100% + 1px);
+}
+
+/* Stopka strony */
+footer {
+    background-color: #343a40; /* Tło */
+    color: white; /* Kolor tekstu */
+    clear: both; /* Czyszczenie floatów */
+    width: 100%; /* Szerokość */
+    padding: 5px 0 5px 0; /* Wypełnienie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Pasek boczny */
+aside {
+    float: right; /* Umieszczenie po prawej stronie */
+    width: 20%; /* Szerokość */
+    padding: 1%; /* Wypełnienie */
+}
+
+/* Efekt cienia i animacji po najechaniu na element */
+*.box:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 47px -12px rgba(46, 46, 46, 1); /* Cień i efekt wewnętrzny przy najechaniu */
+    transform: translateY(-3px); /* Przesunięcie elementu */
+    transition: 0.3s; /* Czas trwania przejścia */
+}
+
+/* Styl dla pudełek */
+*.box {
+    color: #dbffff; /* Kolor tekstu */
+    padding: 16px 24px; /* Wypełnienie */
+    margin: 19px; /* Margines */
+    font-size: 18px; /* Rozmiar czcionki */
+    font-weight: 700; /* Grubość czcionki */
+    letter-spacing: 2px; /* Odstępy między literami */
+    font-family: "Times New Roman", Times, serif; /* Rodzina czcionek */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background-color: #999999; /* Tło */
+    border-radius: 12px; /* Promień zaokrąglenia */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 47px -12px rgba(46, 46, 46, 1); /* Cień i efekt wewnętrzny */
+}
+
+/* Animacja podkreślenia po najechaniu na link */
+.box a:hover {
+    text-decoration: underline; /* Podkreślenie */
+}
+
+/* Ikony społecznościowe */
+.social-icons {
+    display: flex; /* Wyświetlanie jako fleksbox */
+    justify-content: center; /* Wyśrodkowanie względem osi głównej */
+    gap: 20px; /* Odstęp między elementami */
+    margin-top: 10px; /* Margines górny */
+}
+
+/* Styl ikony społecznościowej */
+.social-icon {
+    width: 40px; /* Szerokość */
+    height: 40px; /* Wysokość */
+}
+
+/* Lokalizacja kontaktu */
+.contact-localization a {
+    color: #dbffff; /* Kolor tekstu */
+    font-weight: 700; /* Grubość czcionki */
+    font-size: 18px; /* Rozmiar czcionki */
+    letter-spacing: 2px; /* Odstępy między literami */
+    text-decoration: none; /* Brak dekoracji tekstu */
+}
+
+/* Tekst wyśrodkowany */
+.center-text {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-top: 10px; /* Margines górny */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    /* Dla ekranów o szerokości do 1200px */
+    .nav-buttons button {
+        padding: 10px 40px; /* Zmiana wypełnienia przycisków */
+        font-size: 14px; /* Zmiana rozmiaru czcionki */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Dla ekranów o szerokości do 992px */
+    .nav-buttons button {
+        padding: 8px 32px; /* Zmiana wypełnienia przycisków */
+        font-size: 12px; /* Zmiana rozmiaru czcionki */
+    }
+
+    aside {
+        width: 30%; /* Zmiana szerokości paska bocznego */
+    }
+
+    *.box {
+        padding: 12px 20px; /* Zmiana wypełnienia pudełek */
+        font-size: 16px; /* Zmiana rozmiaru czcionki */
+    }
+
+    iframe {
+        width: 100%; /* Dostosowanie szerokości iframu */
+        height: auto; /* Automatyczna wysokość */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Dla ekranów o szerokości do 768px */
+    .nav-buttons {
+        display: flex; /* Wyświetlanie przycisków nawigacyjnych jako fleksbox */
+    }
+
+    .nav-buttons button {
+        margin: 10px 0; /* Zmiana marginesu */
+        padding: 6px 20px; /* Zmiana wypełnienia przycisków */
+        font-size: 10px; /* Zmiana rozmiaru czcionki */
+    }
+
+    aside {
+        width: 100%; /* Szerokość */
+        float: none; /* Resetowanie ustawienia float */
+        padding: 0; /* Resetowanie wypełnienia */
+    }
+
+    *.box {
+        margin: 10px 0; /* Zmiana marginesu */
+        padding: 8px 12px; /* Zmiana wypełnienia pudełek */
+        font-size: 14px; /* Zmiana rozmiaru czcionki */
+    }
+
+    iframe {
+        width: 100%; /* Szerokość */
+        height: auto; /* Automatyczna wysokość */
+    }
+
+    main {
+        display: flex; /* Wyświetlanie głównego kontenera jako fleksbox */
+        flex-direction: column; /* Zmiana kierunku na kolumnowy */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Dla ekranów o szerokości do 576px */
+    .nav-buttons {
+        display: flex; /* Wyświetlanie przycisków nawigacyjnych jako fleksbox */
+    }
+
+    .nav-buttons button {
+        margin: 8px 2px; /* Zmiana marginesu */
+        padding: 4px 10px; /* Zmiana wypełnienia przycisków */
+        font-size: 11.5px; /* Zmiana rozmiaru czcionki */
+    }
+
+  aside {
+        width: 100%; /* Szerokość */
+        float: none; /* Resetowanie ustawienia float */
+        padding: 0; /* Resetowanie wypełnienia */
+    }
+
+    *.box {
+        margin: 10px 0; /* Zmiana marginesu */
+        padding: 8px 12px; /* Zmiana wypełnienia pudełek */
+        font-size: 12px; /* Zmiana rozmiaru czcionki */
+    }
+
+    iframe {
+        width: 100%; /* Szerokość */
+        height: auto; /* Automatyczna wysokość */
+    }
+
+    main {
+        display: flex; /* Wyświetlanie głównego kontenera jako fleksbox */
+        flex-direction: column; /* Zmiana kierunku na kolumnowy */
+    }
+}
+
+/* Styl nawigacji przyklejanej do góry strony */
+.fixed-nav {
+    position: fixed; /* Ustawienie pozycji na stałe */
+    top: 0; /* Odległość od góry */
+    left: 0; /* Odległość od lewej krawędzi */
+    right: 0; /* Odległość od prawej krawędzi */
+    z-index: 999; /* Indeks na wierzchu */
+    background: linear-gradient(to top, lightgray, white); /* Gradient tła */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień */
+    margin-top: 26px; /* Margines górny */
+}
+
+/* Umieszczenie .box na dole */
+@media (max-width: 768px) {
+    aside {
+        order: 1; /* Zmiana kolejności dla paska bocznego */
+    }
+
+    main {
+        display: flex; /* Wyświetlanie głównego kontenera jako fleksbox */
+        flex-direction: column-reverse; /* Odwrócenie kierunku na kolumnowy i odwrócenie kolejności */
+    }
+}

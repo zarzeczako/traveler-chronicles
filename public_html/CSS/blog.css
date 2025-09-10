@@ -1,0 +1,126 @@
+/* Styl dla sekcji artykułu na blogu */
+.blog-article {
+    max-width: 1000px; /* Maksymalna szerokość */
+    margin: 40px auto; /* Margines odstępu od krawędzi i automatyczne wyśrodkowanie */
+    padding: 20px; /* Wypełnienie */
+    background: #fff; /* Tło */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+    border-radius: 10px; /* Promień zaokrąglenia */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla tytułu artykułu na blogu */
+.blog-title {
+    font-size: 36px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    font-family: 'Merriweather', serif; /* Wybór czcionki */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    letter-spacing: 3px; /* Odstępy między literami */
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); /* Gradient tła */
+    -webkit-background-clip: text; /* Wykorzystanie tła jako maski dla tekstu */
+    -webkit-text-fill-color: transparent; /* Tekst przeźroczysty */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Cień tekstu */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Dolna granica dla dodatkowego efektu */
+}
+
+/* Styl dla głównego obrazu w artykule na blogu */
+.blog-main-image {
+    margin-top: 20px; /* Margines odstępu od góry */
+    width: 700px; /* Szerokość */
+    height: 500px; /* Wysokość */
+    border-radius: 10px; /* Promień zaokrąglenia */
+    margin-bottom: 20px; /* Margines odstępu od dołu */
+}
+
+/* Styl dla treści artykułu na blogu */
+.blog-content {
+    text-align: left; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla akapitów w treści artykułu na blogu */
+.blog-content p {
+    font-size: 18px; /* Rozmiar czcionki */
+    line-height: 1.6; /* Wysokość linii */
+    margin-bottom: 20px; /* Margines dolny */
+    color: #555; /* Kolor tekstu */
+}
+
+/* Styl dla obrazów po lewej i po prawej stronie w treści artykułu na blogu */
+.blog-image-left,
+.blog-image-right {
+    width: 300px; /* Szerokość */
+    height: auto; /* Wysokość automatyczna */
+    border-radius: 10px; /* Promień zaokrąglenia */
+    margin: 20px 0; /* Margines górny i dolny */
+}
+
+/* Styl dla obrazów po lewej stronie w treści artykułu na blogu */
+.blog-image-left {
+    float: left; /* Wyrównanie do lewej */
+    margin-right: 20px; /* Margines odstępu z prawej strony */
+}
+
+/* Styl dla obrazów po prawej stronie w treści artykułu na blogu */
+.blog-image-right {
+    float: right; /* Wyrównanie do prawej */
+    margin-left: 20px; /* Margines odstępu z lewej strony */
+}
+
+/* Media Queries dla różnych szerokości ekranów */
+@media (max-width: 768px) {
+    .blog-main-image {
+        width: 100%; /* Szerokość na całą dostępną przestrzeń */
+        height: auto; /* Wysokość automatyczna */
+    }
+
+    .blog-image-left,
+    .blog-image-right {
+        float: none; /* Resetowanie wyrównania */
+        display: block; /* Wyświetlanie jako blok */
+        margin: 20px auto; /* Margines odstępu od góry i dołu, automatyczne wyśrodkowanie */
+        width: 100%; /* Szerokość na całą dostępną przestrzeń */
+    }
+
+    .blog-title {
+        font-size: 28px; /* Dostosowanie rozmiaru czcionki */
+    }
+
+    .blog-content p {
+        font-size: 16px; /* Dostosowanie rozmiaru czcionki */
+    }
+}
+
+/* Media Queries dla jeszcze mniejszych szerokości ekranów */
+@media (max-width: 576px) {
+    .blog-title {
+        font-size: 24px; /* Dostosowanie rozmiaru czcionki */
+    }
+
+    .blog-content p {
+        font-size: 14px; /* Dostosowanie rozmiaru czcionki */
+    }
+
+    .blog-main-image {
+        width: 100%; /* Szerokość na całą dostępną przestrzeń */
+        height: auto; /* Wysokość automatyczna */
+    }
+}
+
+/* Styl dla sekcji "Więcej zdjęć" */
+.more-photos {
+    font-size: 20px; /* Rozmiar czcionki */
+    margin-top: 60px; /* Margines odstępu od góry */
+    color: #555; /* Kolor tekstu */
+}
+
+/* Styl dla linku do galerii */
+.gallery-link {
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: black; /* Kolor linku */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+}
+
+/* Styl dla linku do galerii po najechaniu myszką */
+.gallery-link:hover {
+    text-decoration: underline; /* Podkreślenie linku po najechaniu myszką */
+}

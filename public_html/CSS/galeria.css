@@ -1,0 +1,63 @@
+/* Styl dla sekcji galerii */
+.gallery-section {
+    padding: 20px; /* Wypełnienie */
+    background: #f8f9fa; /* Tło */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla kontenera galerii */
+.gallery {
+    display: flex; /* Wyświetlanie elementów w układzie flexbox */
+    flex-wrap: wrap; /* Zawijanie elementów w przypadku braku miejsca */
+    gap: 15px; /* Odstęp między elementami */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    margin-bottom: 40px; /* Margines dolny */
+}
+
+/* Styl dla obrazów w galerii */
+.gallery img {
+    width: 300px; /* Szerokość obrazu */
+    height: 420px; /* Wysokość obrazu */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    border-radius: 15px; /* Promień zaokrąglenia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animacja przy najechaniu */
+}
+
+/* Styl dla obrazów w galerii po najechaniu */
+.gallery img:hover {
+    transform: scale(1.05); /* Powiększenie obrazu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Zwiększenie cienia */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+/* Media Query dla ekranów o maksymalnej szerokości 768px */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%; /* Pełna szerokość w kontenerze na mniejszych ekranach */
+        height: auto; /* Automatyczne dostosowanie wysokości zachowując proporcje */
+    }
+}
+
+/* Media Query dla ekranów o maksymalnej szerokości 576px */
+@media (max-width: 576px) {
+    .gallery img {
+        width: 100%; /* Pełna szerokość w kontenerze na jeszcze mniejszych ekranach */
+        height: auto; /* Automatyczne dostosowanie wysokości zachowując proporcje */
+    }
+}
+
+/* Styl dla wyboru miasta */
+.city-select {
+    padding: 10px; /* Wypełnienie */
+    font-size: 25px; /* Rozmiar czcionki */
+    border: 5px solid #ccc; /* Grubość i styl obramowania */
+    border-radius: 9px; /* Promień zaokrąglenia */
+    outline: none; /* Brak zaznaczenia */
+    cursor: pointer; /* Zmiana kursora */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-family: unset; /* Domyślna czcionka */
+    font-weight: bold; /* Pogrubienie tekstu */
+    background: linear-gradient(to top, lightgray, white); /* Gradient tła */
+}

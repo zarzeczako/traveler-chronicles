@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Nagłówek HTML -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Zdjęć - Dziennik Podróżnika</title>
+    <link rel="icon" type="image/x-icon" href="img/ikona.png">
+    <!-- Linki do arkuszy stylów CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/galeria.css">
+    <link rel="stylesheet" href="CSS/lightbox.css">
+</head>
+<body>
+    <!-- Nagłówek strony -->
+    <header>
+        <!-- Banner z tytułem strony -->
+        <p class="banner">
+            KRONIKI PODRÓŻNIKA
+        </p>
+        <!-- Przyciski nawigacji -->
+        <div class="nav-buttons">
+            <button id="home-btn">STRONA GŁÓWNA</button>
+            <button id="questions-btn">PYTANIA</button>
+            <button id="gallery-btn">GALERIA</button>
+            <button id="sources-btn">ŹRÓDŁA</button>
+        </div>
+    </header>
+    <!-- Główna treść strony -->
+    <main class="main-margin">
+        <!-- Sekcja galerii zdjęć -->
+        <section class="gallery-section">
+            <!-- Wybór miasta do wyświetlenia zdjęć -->
+            <div class="centered-text2">
+                <select id="city-select" class="city-select">
+                    <option value="london">LONDYN</option>
+                    <option value="paris">PARYŻ</option>       
+                    <option value="newyork">NOWY JORK</option>
+                    <option value="losangeles">LOS ANGELES</option>
+                    <option value="madrid">MADRYT</option>
+                </select>
+            </div>
+            <!-- Galeria zdjęć dla Londynu -->
+            <div id="london-gallery" class="gallery">
+                <!-- Zdjęcia związane z Londynem -->
+                <img src="galeria/londyn1.jpg" alt="Londyn 1" class="lightbox-trigger">
+                <img src="galeria/londyn2.jpg" alt="Londyn 2" class="lightbox-trigger">
+                <img src="galeria/londyn3.jpg" alt="Londyn 3" class="lightbox-trigger">
+                <img src="galeria/londyn4.jpg" alt="Londyn 4" class="lightbox-trigger">
+                <img src="galeria/londyn5.jpg" alt="Londyn 5" class="lightbox-trigger">
+                <img src="galeria/londyn6.jpg" alt="Londyn 6" class="lightbox-trigger">
+            </div>
+            <!-- Pozostałe galerie zdjęć ukryte początkowo -->
+            <div id="madrid-gallery" class="gallery" style="display: none;">
+                <!-- Zdjęcia związane z Madrytem -->
+                <img src="galeria/madryt1.jpg" alt="Madryt 1" class="lightbox-trigger">
+                <img src="galeria/madryt2.jpg" alt="Madryt 2" class="lightbox-trigger">
+                <img src="galeria/madryt3.jpg" alt="Madryt 3" class="lightbox-trigger">
+                <img src="galeria/madryt4.jpg" alt="Madryt 4" class="lightbox-trigger">
+                <img src="galeria/madryt5.jpg" alt="Madryt 5" class="lightbox-trigger">
+                <img src="galeria/madryt6.jpg" alt="Madryt 6" class="lightbox-trigger">
+            </div>
+            <div id="losangeles-gallery" class="gallery" style="display: none;">
+                <!-- Zdjęcia związane z Los Angeles-->
+                 <img src="galeria/losangeles1.jpg" alt="Los Angeles 1" class="lightbox-trigger">
+                 <img src="galeria/losangeles2.jpg" alt="Los Angeles 2" class="lightbox-trigger">
+                 <img src="galeria/losangeles3.jpg" alt="Los Angeles 3" class="lightbox-trigger">
+                 <img src="galeria/losangeles4.jpg" alt="Los Angeles 4" class="lightbox-trigger">
+                 <img src="galeria/losangeles5.jpg" alt="Los Angeles 5" class="lightbox-trigger">
+                 <img src="galeria/losangeles6.jpg" alt="Los Angeles 6" class="lightbox-trigger">
+            </div>
+            <div id="newyork-gallery" class="gallery" style="display: none;">
+                <!-- Zdjęcia związane z Nowym Jorkiem-->
+                 <img src="galeria/nowyjork1.jpg" alt="Nowy Jork 1" class="lightbox-trigger">
+                 <img src="galeria/nowyjork2.jpg" alt="Nowy Jork 2" class="lightbox-trigger">
+                 <img src="galeria/nowyjork3.jpg" alt="Nowy Jork 3" class="lightbox-trigger">
+                 <img src="galeria/nowyjork4.jpg" alt="Nowy Jork 4" class="lightbox-trigger">
+                 <img src="galeria/nowyjork5.jpg" alt="Nowy Jork 5" class="lightbox-trigger">
+                 <img src="galeria/nowyjork6.jpg" alt="Nowy Jork 6" class="lightbox-trigger">
+            </div>
+            <div id="paris-gallery" class="gallery" style="display: none;">
+                <!-- Zdjęcia związane z Paryża-->
+                 <img src="galeria/paryz1.jpg" alt="Paryż 1" class="lightbox-trigger">
+                 <img src="galeria/paryz2.jpg" alt="Paryż 2" class="lightbox-trigger">
+                 <img src="galeria/paryz3.jpg" alt="Paryż 3" class="lightbox-trigger">
+                 <img src="galeria/paryz4.jpg" alt="Paryż 4" class="lightbox-trigger">
+                 <img src="galeria/paryz5.jpg" alt="Paryż 5" class="lightbox-trigger">
+                 <img src="galeria/paryz6.jpg" alt="Paryż 6" class="lightbox-trigger">
+            </div>
+
+        </section>
+        <!-- Pasek boczny -->
+        <aside>
+            <!-- Blok kontaktowy -->
+            <div class="box">
+                <h3>KONTAKT</h3>
+                <!-- Ikony mediów społecznościowych -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://www.instagram.com"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.pinterest.com"><img src="img/pinterest.png" alt="Pinterest" class="social-icon"></a>
+                </div>
+            </div>
+            <!-- Blok z inspiracją -->
+            <div class="box">
+                <h3>INSPIRACJA</h3>
+                <!-- Osadzony film YouTube -->
+                <iframe width="210" height="185" src="https://www.youtube.com/embed/N9SiuTteiIE?si=rRa5u_5hR_iu37gW"></iframe>
+            </div>
+            <!-- Blok z informacją o następnym celu podróży -->
+            <div class="box">
+                <h3>NASTEPNY CEL</h3>
+                <!-- Lokalizacja oraz link do artykułu o celu podróży -->
+                <section class="contact-localization">
+                    <iframe width="210" height="185" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.35442532852!2d12.371187775710176!3d41.9102087922826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908503c4!2sKoloseum!5e0!3m2!1spl!2spl!4v1717191619395!5m2!1spl!2spl" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>
+                        <a href="https://gocity.com/en/blog/rome-for-movie-fans">Włochy, Rzym</a>
+                    </p>
+                </section>
+            </div>
+        </aside>
+    </main>
+    <!-- Stopka strony -->
+    <footer>
+        Michał Zarzecki Copyright
+    </footer>
+    <!-- Lightbox HTML -->
+    <div id="lightbox" class="lightbox"> 
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="placeholder.jpg" alt="obraz lightbox">
+    </div>
+    <!-- Skrypty JavaScript -->
+    <script src="JS/script.js"></script>
+    <script src="JS/lightbox.js"></script>
+</body>
+</html>

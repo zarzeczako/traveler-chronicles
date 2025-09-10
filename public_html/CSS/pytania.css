@@ -1,0 +1,180 @@
+/* Styl dla sekcji pytań */
+.questions-section {
+    display: flex; /* Wyświetlanie w układzie flexbox */
+    flex-wrap: wrap; /* Zawijanie elementów */
+    gap: 20px; /* Odstęp między elementami */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+    margin-bottom: 40px; /* Margines dolny */
+    animation: fadel 2.5s; /* Animacja pojawiania się */
+}
+
+/* Animacja fade */
+@keyframes fadel {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styl dla pojedynczego pytania */
+.question {
+    background: #fff; /* Tło */
+    border: 1px solid #ddd; /* Obramowanie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień */
+    padding: 20px; /* Wypełnienie */
+    width: 70%; /* Szerokość */
+    margin-bottom: 20px; /* Margines dolny */
+}
+
+/* Styl dla treści pytania */
+.question-text {
+    font-size: 22px; /* Rozmiar czcionki */
+    color: #333; /* Kolor tekstu */
+    margin: 0 0 10px 0; /* Margines */
+    font-weight: bold; /* Pogrubienie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla treści odpowiedzi */
+.answer-text {
+    font-size: 19px; /* Rozmiar czcionki */
+    color: #666; /* Kolor tekstu */
+}
+
+/* Styl dla linków w treści odpowiedzi */
+.answer-text a {
+    color: #000066; /* Kolor linku */
+    text-decoration: none; /* Brak podkreślenia */
+    font-weight: bold; /* Pogrubienie tekstu */
+}
+
+/* Styl dla linków w treści odpowiedzi po najechaniu */
+.answer-text a:hover {
+    text-decoration: underline; /* Podkreślenie po najechaniu */
+}
+
+/* Styl dla formularza pytań */
+.question-form {
+    background: #fff; /* Tło */
+    padding: 30px; /* Wypełnienie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień */
+    max-width: 800px; /* Maksymalna szerokość */
+    margin: 0 auto 40px; /* Margines */
+    animation: fadel 3.2s; /* Animacja pojawiania się */
+}
+
+/* Styl dla grupy formularza */
+.form-group {
+    margin-bottom: 20px; /* Margines dolny */
+}
+
+/* Styl dla etykiety formularza */
+label {
+    display: block; /* Wyświetlanie jako blok */
+    font-family: unset; /* Domyślna czcionka */
+    margin-bottom: 5px; /* Margines dolny */
+    color: #333; /* Kolor tekstu */
+    font-size: 18px; /* Rozmiar czcionki */
+}
+
+/* Styl dla pól tekstowych i pola tekstowego */
+input[type="text"],
+textarea {
+    width: 100%; /* Szerokość 100% */
+    padding: 10px; /* Wypełnienie */
+    border: 1px solid #ddd; /* Obramowanie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    font-size: 14px; /* Rozmiar czcionki */
+}
+
+/* Styl dla pola tekstowego */
+textarea {
+    resize: vertical; /* Dozwolone przewijanie w pionie */
+}
+
+.form-buttons {
+    display: flex; /* Wyświetlanie w układzie flexbox */
+    gap: 10px; /* Odstęp między elementami */
+    justify-content: flex-end; /* Wyśrodkowanie elementów na końcu */
+}
+
+/* Styl dla listy pytań */
+#questions-list {
+    display: flex; /* Wyświetlanie w układzie flexbox */
+    flex-direction: column; /* Ułożenie w kolumnie */
+    align-items: center; /* Wyśrodkowanie elementów w poziomie */
+    padding: 10px; /* Wewnętrzny odstęp */
+    max-width: 900px; /* Maksymalna szerokość */
+    margin: 0 auto; /* Marginesy automatyczne poziome */
+}
+
+/* Styl dla przycisków formularza */
+.form-buttons button {
+    padding: 10px 20px; /* Wypełnienie */
+    border: none; /* Brak obramowania */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    cursor: pointer; /* Kursor wskazujący */
+    font-size: 16px; /* Rozmiar czcionki */
+}
+
+.form-buttons button[type="reset"] {
+    background: #ccc; /* Tło */
+    color: #fff; /* Kolor tekstu */
+}
+
+/* Styl dla przycisku resetowania formularza po najechaniu */
+.form-buttons button[type="reset"]:hover {
+    background: #666; /* Tło po najechaniu */
+}
+
+/* Styl dla przycisku wysyłania formularza */
+.form-buttons button[type="submit"] {
+    background: #007BFF; /* Tło */
+    color: #fff; /* Kolor tekstu */
+}
+
+/* Styl dla przycisku wysyłania formularza po najechaniu */
+.form-buttons button[type="submit"]:hover {
+    background: #000066; /* Tło po najechaniu */
+    color: #fff; /* Kolor tekstu po najechaniu */
+}
+
+/* Styl dla przycisków z niestandardowym wyglądem */
+.styled-button {
+    padding: 10px 25px; /* Wypełnienie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    cursor: pointer; /* Kursor wskazujący */
+    font-size: 16px; /* Rozmiar czcionki */
+    background: linear-gradient(to top, lightgray, white); /* Gradient tła */
+    color: black; /* Kolor tekstu */
+    margin: 10px; /* Margines */
+    font-family: unset; /* Domyślna czcionka */
+}
+
+/* Styl dla przycisków z niestandardowym wyglądem po najechaniu */
+.styled-button:hover {
+    background: linear-gradient(to bottom, gray, lightgray); /* Gradient tła po najechaniu */
+}
+
+/* Styl dla grupy przycisków wyśrodkowanych */
+.centered-buttons {
+    display: flex; /* Wyświetlanie w układzie flexbox */
+    justify-content: center; /* Wyśrodkowanie elementów w poziomie */
+    gap: 20px; /* Odstęp między elementami */
+    margin-top: 20px; /* Margines na górze */
+}
+
+/* Styl dla niestandardowego pola wyboru */
+.styled-select {
+    width: 100%; /* Szerokość 100% */
+    padding: 10px; /* Wypełnienie */
+    border: 1px solid #ddd; /* Obramowanie */
+    border-radius: 8px; /* Promień zaokrąglenia */
+    font-size: 16px; /* Rozmiar czcionki */
+    background-position: right 10px top 50%; /* Pozycja tła */
+    background-size: 12px 12px; /* Rozmiar tła */
+}
